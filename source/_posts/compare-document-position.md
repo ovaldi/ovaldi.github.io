@@ -9,20 +9,17 @@ compareDocumentPosition方法比较两个节点，将会返回描述它们在文
 拿到这个整数之后，通过一些位运算，我们就能得出元素位置的详细信息。（实际上，这与C#语言中的[Flags]一个道理）
 直接上示例代码：
 
-		var doc = document,
-	    html = doc.documentElement,
-	    body = doc.body;
+    var doc = document, html = doc.documentElement, body = doc.body;
+    var pos = html.compareDocumentPosition(body);//20
 
-		var pos = html.compareDocumentPosition(body);//20
+    var after = pos & 2;//0
+    console.log('html在body后面',!!after);
 
-		var after = pos & 2;//0
-		console.log('html在body后面',!!after);
+    var before = pos & 4;//4
+    console.log('html在body前面',!!before);
 
-		var before = pos & 4;//4
-		console.log('html在body前面',!!before);
+    var inside = pos & 8;//0
+    console.log('html在body内部',!!inside);
 
-		var inside = pos & 8;//0
-		console.log('html在body内部',!!inside);
-
-		var contain = pos & 16;//16
-		console.log('html包含body',!!contain);
+    var contain = pos & 16;//16
+    console.log('html包含body',!!contain);
