@@ -15,7 +15,12 @@ date: 2015-08-01
             $encode = $("#encode"), $encode_result = $("#encode_result");
 
         $("#btnEncode").on("click", function(){
-            $encode_result.text(escape($encode.val()).replace(/%u/g, '\\u'));
+            //$encode_result.text(escape($encode.val()).replace(/%u/g, '\\u'));
+            var text = $encode.val(), results = [], i, j;
+            for(i = 0, j= text.length; i < j; i++){
+                results.push(("00" + text.charCodeAt(i).toString(16)).slice(-4));
+            }
+            $encode_result.text(results.length ? '\\u' + results.join('\\u') : '');
         });
 
         $("#btnDecode").on("click", function(){
