@@ -1,4 +1,4 @@
-title: mac下配置多个ssh key
+title: mac下配置多个ssh key共存
 date: 2015-08-02
 ---
 ###第一种方式：将私钥添加到ssh-agent的session中
