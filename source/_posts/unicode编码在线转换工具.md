@@ -20,7 +20,7 @@ date: 2015-08-01
             while(len){
                 results.unshift(
                     '\\u' +
-                    ('00' + text.charCodeAt(--len).toString(16)).slice(-4)
+                    ('000' + text.charCodeAt(--len).toString(16)).slice(-4)
                 );
             }
             $encode_result.text(results.join(''));
