@@ -1,5 +1,6 @@
 title: React组件之间的通讯方式
 date: 2015-08-20
+tags: React communication postal.js
 ---
 
 本文大致梳理了一下React中组件之间的通讯方式，文中会以一个“列表搜索”的功能为示例，根据组件组合方式的不同，分别演示如何做组件之间的通讯。
@@ -128,7 +129,7 @@ date: 2015-08-20
 
 
 ### 相互独立的组件
-对于那些相互之间比较独立的组件，我们可以使用 全局的事件/消息系统 来做组件之间的通讯，比如dojo中的topic, 在这里，我推荐使用[postal.js](https://github.com/postaljs/postal.js "postal.js")这个库，简要示例如下：
+对于那些相互之间比较独立的组件，我们可以使用 全局的事件/消息系统 来做组件之间的通讯，比如dojo中的[topic](https://github.com/dojo/dojo/blob/master/topic.js "dojo/topic"), 在这里，我推荐使用[postal.js](https://github.com/postaljs/postal.js "postal.js")这个库，简要示例如下：
 
     var Filter = React.createClass({
         _onChange: function() {
