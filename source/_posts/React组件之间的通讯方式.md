@@ -70,12 +70,12 @@ date: 2015-08-20
 有共同父组件的子组件之间的通讯，我们可以给其中一个子组件设置回调，简要示例如下：
 
     var Filters = React.createClass({
-      handleFilterChange: function() {
+      _onChange: function() {
         var value = this.refs.filterInput.getDOMNode().value;
-        this.props.updateFilter(value);
+        this.props.onChange(value);
       },
       render: function() {
-        return <input type="text" ref="filterInput" onChange={this.handleFilterChange} placeholder="Filter" />;
+        return <input type="text" ref="filterInput" onChange={this._onChange} placeholder="Filter" />;
       }
     });
 
@@ -106,7 +106,7 @@ date: 2015-08-20
           nameFilter: ''
         };
       },
-      handleFilterUpdate: function(filterValue) {
+      _onFilter: function(filterValue) {
         this.setState({
           nameFilter: filterValue
         });
@@ -119,7 +119,7 @@ date: 2015-08-20
 
         return (
           <div>
-            <Filters updateFilter={this.handleFilterUpdate} />
+            <Filters onChange={this._onFilter} />
             <List items={displayedItems} />
           </div>
         );
@@ -135,6 +135,7 @@ date: 2015-08-20
             var input = React.findDOMNode(this);
                 value = input.value;
 
+            //发布消息通知
             postal.publish({
                 channel: "user",
                 topic: "list.filter",
@@ -160,6 +161,7 @@ date: 2015-08-20
       },
       componentDidMount: function(){
         var self = this;
+        //监听消息通知
         postal.subscribe({
             channel: "user",
             topic: "list.filter",
