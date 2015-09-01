@@ -10,7 +10,7 @@ tags: React communication postal.js
 
     var Filter = React.createClass({
         _onChange: function() {
-            var input = React.findDOMNode(this);
+            var input = React.findDOMNode(this),
                 value = input.value;
 
             //发布消息通知
@@ -85,7 +85,7 @@ tags: React communication postal.js
 
     var Filters = React.createClass({
         _onChange: function() {
-            var input = React.findDOMNode(this);
+            var input = React.findDOMNode(this),
                 value = input.value;
 
             if(this.props.onChange){
