@@ -34,4 +34,4 @@ Promise的出现，让我们可以较好的解决嵌套回调的问题，一般�
 
 >If either onFulfilled or onRejected returns a value x, run the Promise Resolution Procedure [[Resolve]]\(promise2, x\).
 
-无论前面的Promise是Resolve还是Reject，都必须把返回值传递给下一个Promise的Resolve回调。
+所以，无论前面的Promise是Resolve还是Reject，都应该把返回值传递给下一个Promise的Resolve回调。
