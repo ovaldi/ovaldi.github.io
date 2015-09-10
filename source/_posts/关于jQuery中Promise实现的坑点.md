@@ -1,4 +1,4 @@
-title: jQuery与Promise A+规范
+title: 关于jQuery中Promise实现的坑点
 date: 2015-08-18
 tags: jQuery Deferred Promise
 ---
