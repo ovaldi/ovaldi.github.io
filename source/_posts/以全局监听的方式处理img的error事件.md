@@ -20,7 +20,7 @@ img标签在加载失败时，会触发error事件，所以，我们可以这么
 (事实上，在W3C的[DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings-htmlevents)中规定，error事件是会冒泡的，而在[DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-error)中规定，error事件是不会冒泡的。)
 
 要解决上述两个问题，我们需要先了解一下DOM事件发生的三个阶段：
-> 1. 捕获阶段: 从根节点开始顺序而下，检测每个节点是否注册了事件处理函数。在标准浏览器中，我们可以通过指定addEventListener的第三个参数useCapture为true，以使事件处理函数在该阶段运行。(低版本IE中无此阶段)
+> 1. 捕获阶段: 从根节点开始顺序而下，检测每个节点是否注册了事件处理函数。在标准浏览器中，我们可以通过指定addEventListener的第三个参数useCapture为true，以使事件处理函数在该阶段运行。(低版本IE中无法指定事件处理函数在该阶段执行)
 > 2. 目标阶段: 触发在目标对象本身注册的事件处理函数，也称正常事件派发阶段。
 > 3. 冒泡阶段: 从目标节点到根节点，检测每个节点是否注册了事件处理函数。在标准浏览器中，我们可以通过指定addEventListener的第三个参数useCapture为true，以使事件处理函数在该阶段运行。
 
@@ -33,4 +33,4 @@ img标签在加载失败时，会触发error事件，所以，我们可以这么
         }
     }, true /*指定事件处理函数在捕获阶段执行*/);
 
-需要注意的是，由于低版本IE中，attachEvent方法无法指定事件处理函数在捕获阶段执行，所以，该方案不能适用。
+需要注意的是，由于低版本IE中attachEvent方法无法指定事件处理函数在捕获阶段执行，所以，该方案在低版本IE中不能适用。
