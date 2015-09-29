@@ -1,6 +1,6 @@
 title: 'javascript DOM API: normalize'
 date: 2015-09-18 17:05:24
-tags: javascript DOM API normalize
+tags: javascript,DOM API,normalize
 ---
 
 normalize方法的作用是：移除空的文本节点，并连接相邻的文本节点。(该方法在开发一些页面编辑器时很有用处)

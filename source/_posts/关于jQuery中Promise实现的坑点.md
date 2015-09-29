@@ -1,6 +1,6 @@
 title: 关于jQuery中Promise实现的坑点
 date: 2015-08-18
-tags: jQuery Deferred Promise
+tags: jQuery,Deferred,Promise
 ---
 Promise的出现，让我们可以较好的解决嵌套回调的问题，一般情况下，我们会优先选用专门的Promise工具类（比如[Q.js](https://github.com/kriskowal/q "Q.js") 或 [RSVP.js](https://github.com/tildeio/rsvp.js "RSVP.js")），然而，有些小项目会直接使用jQuery自带的Promise实现，这时候，就要小心有个坑了，jQuery对于Promise的实现是与其它Promise库不一致的（或者说，没有严格按照Promise A+规范去实现）。
 
