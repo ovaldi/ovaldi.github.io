@@ -1,6 +1,6 @@
 title: React组件之间的通讯方式
 date: 2015-08-20
-tags: React communication postal.js
+tags: [React,communication,postal.js]
 ---
 
 本文大致梳理了一下React中组件之间的通讯方式，文中会以一个“列表搜索”的功能为示例，根据组件组合方式的不同，分别演示如何做组件之间的通讯。
