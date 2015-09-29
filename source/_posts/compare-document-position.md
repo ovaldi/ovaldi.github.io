@@ -1,6 +1,6 @@
 title: 使用compareDocumentPosition比较两个元素在文档中的位置
 date: 2015-05-11 19:30:08
-tags:
+tags: [javascript,DOM API]
 ---
 
 在开发一些页面编辑器的时候，有时需要比较两个元素的位置，这种情况下，我们可以使用compareDocumentPosition方法。

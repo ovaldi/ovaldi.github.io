@@ -1,6 +1,6 @@
 title: javascript动态修改style/link标签引入的css样式规则
 date: 2015-09-29 10:48:34
-tags: javascript,StyleSheet,CSSRule
+tags: [javascript,StyleSheet,CSSRule]
 ---
 此前在开发公司的一款网页编辑器的时候，需要动态修改样式表规则，在这里大致总结了一下。
 

@@ -1,6 +1,6 @@
 title: script标签属性defer与async的区别
 date: 2015-04-03 23:21:46
-tags:
+tags: javascript
 ---
 
 默认情况下，浏览器中的js脚本是阻塞式的顺序加载，但我们可以通过给script标签添加defer或者async属性，以达到并行加载的目的，如：
