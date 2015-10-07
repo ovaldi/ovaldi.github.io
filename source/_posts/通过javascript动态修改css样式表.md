@@ -24,7 +24,7 @@ tags: [javascript,StyleSheet,CSSRule]
     var link = document.getElementsByTagName('link')[0];
 
     //for Chrome & Firefox
-    link.sheet.insertRule(0, 'body', 'color: red;');
+    link.sheet.insertRule('body {color: red;}', 0);
     link.sheet.deleteRule(0);
 
     //for IE
