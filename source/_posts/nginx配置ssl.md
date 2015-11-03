@@ -1,7 +1,8 @@
 title: nginx配置ssl
 date: 2015-05-03 15:59:06
-tags: nginx ssl
+tags: [nginx,ssl]
 ---
+
 #### 1. 创建一个服务器私钥:
 
     openssl genrsa -des3 -out test.key 1024

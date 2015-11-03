@@ -1,5 +1,6 @@
 title: unicode编码在线转换工具
 date: 2015-08-01
+tags: Tools
 ---
 <div>
 <textarea id="encode" style="width: 88%;" rows="5"></textarea>
