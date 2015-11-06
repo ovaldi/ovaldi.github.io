@@ -1,7 +1,9 @@
 title: 初探selenium配合webdriverio进行功能测试
 date: 2015-10-25 19:20:28
-tags:
+tags: [selenium,webdriverio,测试]
 ---
+简单玩了一下webdriverio，写个简要的笔记。
+
 #### 1. 全局安装[webdriverio](https://github.com/webdriverio/webdriverio)
 
     npm install -g webdriverio
@@ -15,10 +17,10 @@ tags:
 #### 3. 下载你将要测试的浏览器的驱动包，比如[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/home)
 chromedriver
 
-#### 4. 下载[Selenium独立服务包](http://docs.seleniumhq.org/download/)
+#### 4. 下载[selenium独立服务包](http://docs.seleniumhq.org/download/)
 selenium-server-standalone-2.47.0.jar
 
-#### 5. 启动Selenium服务
+#### 5. 启动selenium服务
 
     sudo java -jar selenium-server-standalone-2.47.0.jar -Dwebdriver.chrome.driver=/path/to/chromedriver
 
