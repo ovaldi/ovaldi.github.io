@@ -25,7 +25,7 @@ selenium-server-standalone-2.47.0.jar
     sudo java -jar selenium-server-standalone-2.47.0.jar -Dwebdriver.chrome.driver=/path/to/chromedriver
 
 #### 6. 运行你的测试脚本
-在这里，我编写以下脚本来尝试抓取天猫官网的标题
+在这里，编写以下脚本，尝试抓取天猫官网的标题
 
     var webdriverio = require('webdriverio');
     var options = {
@@ -47,6 +47,6 @@ selenium-server-standalone-2.47.0.jar
 
     node test.js
 
-你将看到控制台输出
+程序将自动打开Chrome浏览器，并访问天猫官网，然后你将看到控制台输出如下信息：
 
     Title was: 天猫tmall.com--上天猫，就够了
