@@ -56,6 +56,14 @@
 			alert("main: clicked...");
 		});
 
+		button.addEventListener('touchstart', function(e){
+			// e.preventDefault();
+		}, false);
+
+		button.addEventListener('click', function(e){
+			console.log(e);
+		}, false);
+
 		//hide wrapper
 		button.addEventListener('touchend', function(){
 			wrapper.style.display = 'none';
