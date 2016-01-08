@@ -6,33 +6,30 @@
   <title>移动端页面『点击穿透』问题的解决方法 | 算沙的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="对于手机端H5页面存在的『点击穿透』问题，网上已经存在各种五花八门的解决方法，比如这里。
-总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，提出一个相对简单的解决方法：
+总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，根据W3C Touch Events文档，我们可以想到一个相对简单的解决方法：
 
-在外层元素中监听『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发『click』事件。
+在外层元素中监听冒泡上来的『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发后续的『click』事件。
 
-经测试，在Safari、Chrome、UC、QQ等浏览器下，该方法均能正确运行。
-具体示例代码如下：">
+经测试，在Safari、Chrome">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端页面『点击穿透』问题的解决方法">
 <meta property="og:url" content="//ovaldi.github.io/2016/01/07/移动端页面『点击穿透』问题的解决方法/index.html">
 <meta property="og:site_name" content="算沙的博客">
 <meta property="og:description" content="对于手机端H5页面存在的『点击穿透』问题，网上已经存在各种五花八门的解决方法，比如这里。
-总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，提出一个相对简单的解决方法：
+总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，根据W3C Touch Events文档，我们可以想到一个相对简单的解决方法：
 
-在外层元素中监听『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发『click』事件。
+在外层元素中监听冒泡上来的『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发后续的『click』事件。
 
-经测试，在Safari、Chrome、UC、QQ等浏览器下，该方法均能正确运行。
-具体示例代码如下：">
-<meta property="og:updated_time" content="2016-01-07T08:50:03.000Z">
+经测试，在Safari、Chrome">
+<meta property="og:updated_time" content="2016-01-08T05:39:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端页面『点击穿透』问题的解决方法">
 <meta name="twitter:description" content="对于手机端H5页面存在的『点击穿透』问题，网上已经存在各种五花八门的解决方法，比如这里。
-总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，提出一个相对简单的解决方法：
+总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，根据W3C Touch Events文档，我们可以想到一个相对简单的解决方法：
 
-在外层元素中监听『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发『click』事件。
+在外层元素中监听冒泡上来的『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发后续的『click』事件。
 
-经测试，在Safari、Chrome、UC、QQ等浏览器下，该方法均能正确运行。
-具体示例代码如下：">
+经测试，在Safari、Chrome">
   
     <link rel="alternative" href="/atom.xml" title="算沙的博客" type="application/atom+xml">
   
@@ -234,9 +231,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>对于手机端H5页面存在的『点击穿透』问题，网上已经存在各种五花八门的解决方法，比如<a href="http://www.ayqy.net/blog/%E7%A7%BB%E5%8A%A8%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E7%A9%BF%E9%80%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" target="_blank" rel="external">这里</a>。</p>
-<p>总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，提出一个相对简单的解决方法：</p>
+<p>总的来说，这些方法要么相对烦琐，要么存在兼容问题，在这里，根据<a href="http://www.w3.org/TR/touch-events/#h2_mouse-events" target="_blank" rel="external">W3C Touch Events文档</a>，我们可以想到一个相对简单的解决方法：</p>
 <blockquote>
-<p>在外层元素中监听『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发『click』事件。</p>
+<p>在外层元素中监听冒泡上来的『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发后续的『click』事件。</p>
 </blockquote>
 <p>经测试，在Safari、Chrome、UC、QQ等浏览器下，该方法均能正确运行。</p>
 <p>具体示例代码如下：</p>
