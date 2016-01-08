@@ -21,7 +21,7 @@
 在外层元素中监听冒泡上来的『touchend』事件，并阻止『touchend』事件的默认行为，以防止触发后续的『click』事件。
 
 经测试，在Safari、Chrome">
-<meta property="og:updated_time" content="2016-01-08T05:39:00.000Z">
+<meta property="og:updated_time" content="2016-01-08T05:43:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端页面『点击穿透』问题的解决方法">
 <meta name="twitter:description" content="对于手机端H5页面存在的『点击穿透』问题，网上已经存在各种五花八门的解决方法，比如这里。
@@ -237,7 +237,19 @@
 </blockquote>
 <p>经测试，在Safari、Chrome、UC、QQ等浏览器下，该方法均能正确运行。</p>
 <p>具体示例代码如下：</p>
-<pre><code>var wrapper = document.getElementById(&apos;wrapper&apos;);
+<pre><code>&lt;body&gt;
+    &lt;div id=&quot;main&quot;&gt;
+        ... ...
+        &lt;div id=&quot;wrapper&quot;&gt;
+            &lt;span id=&quot;button&quot;&gt;
+                touch me
+            &lt;/span&gt;
+        &lt;/div&gt;
+        ... ...
+    &lt;/div&gt;
+&lt;/body&gt;
+
+var wrapper = document.getElementById(&apos;wrapper&apos;);
 var button    = document.getElementById(&apos;button&apos;);
 
 button.addEventListener(&apos;touchend&apos;, function(ev){

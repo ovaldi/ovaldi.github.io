@@ -212,7 +212,19 @@
 </blockquote>
 <p>经测试，在Safari、Chrome、UC、QQ等浏览器下，该方法均能正确运行。</p>
 <p>具体示例代码如下：</p>
-<pre><code>var wrapper = document.getElementById(&apos;wrapper&apos;);
+<pre><code>&lt;body&gt;
+    &lt;div id=&quot;main&quot;&gt;
+        ... ...
+        &lt;div id=&quot;wrapper&quot;&gt;
+            &lt;span id=&quot;button&quot;&gt;
+                touch me
+            &lt;/span&gt;
+        &lt;/div&gt;
+        ... ...
+    &lt;/div&gt;
+&lt;/body&gt;
+
+var wrapper = document.getElementById(&apos;wrapper&apos;);
 var button    = document.getElementById(&apos;button&apos;);
 
 button.addEventListener(&apos;touchend&apos;, function(ev){
