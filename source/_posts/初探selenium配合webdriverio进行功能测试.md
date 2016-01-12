@@ -6,12 +6,18 @@ tags: [selenium,webdriverio,测试]
 
 #### 1. 全局安装[webdriverio](https://github.com/webdriverio/webdriverio)
 
+```
     npm install -g webdriverio
+```
+
 安装完成后，本地就有了wdio命令。
 
 #### 2. 初始化配置文件
 
+```
     wdio config
+```
+
 根据命令提示，一步步输入你的配置信息，最终，会在当前路径生成一个wdio.config.js文件。
 
 #### 3. 下载你将要测试的浏览器的驱动包，比如[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/home)
@@ -22,11 +28,14 @@ selenium-server-standalone-2.47.0.jar
 
 #### 5. 启动selenium服务
 
+```
     sudo java -jar selenium-server-standalone-2.47.0.jar -Dwebdriver.chrome.driver=/path/to/chromedriver
+```
 
 #### 6. 运行你的测试脚本
 在这里，编写以下脚本，尝试抓取天猫官网的标题
 
+```js
     var webdriverio = require('webdriverio');
     var options = {
         desiredCapabilities: {
@@ -42,6 +51,7 @@ selenium-server-standalone-2.47.0.jar
             console.log('Title was: ' + res.value);
         })
         .end();
+```
 
 另存为test.js，执行命令
 
