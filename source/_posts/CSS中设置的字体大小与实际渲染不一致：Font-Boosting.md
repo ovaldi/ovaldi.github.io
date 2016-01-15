@@ -16,6 +16,8 @@ tags: Font Boosting
 
 可以用以下CSS解决这个问题：
 
-    body, body * {
-        max-height: 100%;
-    }
+```css
+body, body * {
+    max-height: 100%;
+}
+```
