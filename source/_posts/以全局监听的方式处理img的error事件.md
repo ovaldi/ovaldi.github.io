@@ -7,9 +7,11 @@ tags: global img error
 
 img标签在加载失败时，会触发error事件，所以，我们可以这么做
 
-    $("img").on("error", function(){
-        this.src = "/img/hint.jpg";
-    });
+```js
+$("img").on("error", function(){
+    this.src = "/img/hint.jpg";
+});
+```
 
 然而，这种处理方法存在两个问题：
 
@@ -26,11 +28,13 @@ img标签在加载失败时，会触发error事件，所以，我们可以这么
 
 通过了解以上三个阶段，我们就可以使用如下代码解决：
 
-    document.addEventListener("error", function(e){
-        var elem = e.target;
-        if(elem.tagName.toLowerCase() === 'img'){
-            elem.src = "/img/hint.jpg";
-        }
-    }, true /*指定事件处理函数在捕获阶段执行*/);
+```js
+document.addEventListener("error", function(e){
+    var elem = e.target;
+    if(elem.tagName.toLowerCase() === 'img'){
+        elem.src = "/img/hint.jpg";
+    }
+}, true /*指定事件处理函数在捕获阶段执行*/);
+```
 
 需要注意的是，由于低版本IE中attachEvent方法无法指定事件处理函数在捕获阶段执行，所以，该方案在低版本IE中不能适用。

@@ -7,23 +7,31 @@ normalize方法的作用是：移除空的文本节点，并连接相邻的文�
 
 执行以下示例代码：
 
-    var div  = document.createElement('div'),
-        tn1  = document.createTextNode('tn1'),
-        tn2  = document.createTextNode('tn2'),
-        span = document.createElement('span');
+```js
+var div  = document.createElement('div'),
+    tn1  = document.createTextNode('tn1'),
+    tn2  = document.createTextNode('tn2'),
+    span = document.createElement('span');
 
-    div.appendChild(tn1);
-    div.appendChild(tn2);
-    div.appendChild(span);
+div.appendChild(tn1);
+div.appendChild(tn2);
+div.appendChild(span);
+```
 
 打印div的子节点个数为3
 
-    console.log(div.childNodes.length); //3
+```js
+console.log(div.childNodes.length); //3
+```
 
 执行normalize方法
 
-    div.normalize();
+```js
+div.normalize();
+```
 
 再次打印div的子元素个数，会发现子节点个数为2（tn1和tn2被合并成一个文本节点）
 
-    console.log(div.childNodes.length);//2
+```js
+console.log(div.childNodes.length);//2
+```

@@ -6,32 +6,38 @@ tags: [javascript,StyleSheet,CSSRule]
 
 >修改style标签引入的css
 
-    var css  = "body{ color: red;}";
-    var style = document.getElementsByTagName('style')[0];
+```js
+var css  = "body{ color: red;}";
+var style = document.getElementsByTagName('style')[0];
 
-    //for Chrome & Firefox
-    style.textContent = css;
-    //or
-    style.innerHTML   = css;
-    //or
-    style.appendChild(document.createTextNode(css));
+//for Chrome & Firefox
+style.textContent = css;
+//or
+style.innerHTML   = css;
+//or
+style.appendChild(document.createTextNode(css));
 
-    //for IE
-    style.styleSheet.cssText = "body{ color: red;}";
+//for IE
+style.styleSheet.cssText = "body{ color: red;}";
+```
 
 >修改link标签引入的css
 
-    var link = document.getElementsByTagName('link')[0];
+```js
+var link = document.getElementsByTagName('link')[0];
 
-    //for Chrome & Firefox
-    link.sheet.insertRule('body {color: red;}', 0);
-    link.sheet.deleteRule(0);
+//for Chrome & Firefox
+link.sheet.insertRule('body {color: red;}', 0);
+link.sheet.deleteRule(0);
 
-    //for IE
-    link.styleSheet.addRule('body', 'color: red', 0);
-    link.styleShhet.removeRule(0);
+//for IE
+link.styleSheet.addRule('body', 'color: red', 0);
+link.styleShhet.removeRule(0);
+```
 
 >在IE8下，有个黑魔法可以直接覆写link的引入的所有样式规则，示例如下：
 
-    var link = document.getElementsByTagName('link')[0];
-    link.styleSheet.cssText = 'body{ color: red;} div{ border: 1px solid #ccc;}';
+```js
+var link = document.getElementsByTagName('link')[0];
+link.styleSheet.cssText = 'body{ color: red;} div{ border: 1px solid #ccc;}';
+```

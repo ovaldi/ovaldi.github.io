@@ -6,25 +6,27 @@ Promise的出现，让我们可以较好的解决嵌套回调的问题，一般�
 
 这里写一个简单示例：
 
-    function next(){
-        var defer = $.Deferred();
-        setTimeout(function(){
-            defer.reject(0);
-        }, 1000);
-        return defer.promise();
-    }
+```js
+function next(){
+    var defer = $.Deferred();
+    setTimeout(function(){
+        defer.reject(0);
+    }, 1000);
+    return defer.promise();
+}
 
-    next()
-    .then(function(){
-        return 1;
-    }, function(num){
-        return num;
-    })
-    .then(function(num){
-        console.log(num + 1);
-    }, function(num){
-        console.log(num + 2);
-    });
+next()
+.then(function(){
+    return 1;
+}, function(num){
+    return num;
+})
+.then(function(num){
+    console.log(num + 1);
+}, function(num){
+    console.log(num + 2);
+});
+```
 
 如上代码，大家认为会打印出什么呢？
 
