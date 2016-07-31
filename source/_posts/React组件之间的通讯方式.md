@@ -8,7 +8,7 @@ tags: [React,communication,postal.js]
 ### 相互独立的组件
 对于那些相互之间比较独立的组件，我们可以使用 全局的事件/消息系统 来做组件之间的通讯，比如dojo中的[topic](https://github.com/dojo/dojo/blob/master/topic.js "dojo/topic"), 在这里，我推荐使用[postal.js](https://github.com/postaljs/postal.js "postal.js")这个库，简要示例如下：
 
-```js
+``` js
 var Filter = React.createClass({
     _onChange: function() {
         var input = React.findDOMNode(this),
@@ -27,6 +27,7 @@ var Filter = React.createClass({
         return <input type="text" ref="filterInput" onChange={this._onChange} placeholder="Filter" />;
     }
 });
+
 
 var List = React.createClass({
   getInitialState: function() {
@@ -85,7 +86,7 @@ React.renderComponent(<List />, document.getElementById("user_list"));
 ### 子组件与父组件之间的通讯
 子组件与父组件之间的通讯，我们可以给子组件设置事件回调，简要示例如下：
 
-```js
+``` js
 var Filters = React.createClass({
     _onChange: function() {
         var input = React.findDOMNode(this),
@@ -147,7 +148,7 @@ var List = React.createClass({
 ### 有共同父组件的子组件之间的通讯
 有共同父组件的子组件之间的通讯，我们可以给其中一个子组件设置回调，简要示例如下：
 
-```js
+``` js
 var Filters = React.createClass({
   _onChange: function() {
     var value = this.refs.filterInput.getDOMNode().value;
