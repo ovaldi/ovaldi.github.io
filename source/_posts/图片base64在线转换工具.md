@@ -1,6 +1,6 @@
-title: 图片base64在线转换工具
+title: 图片与Base64在线转换工具
 date: 2015-10-10 11:39:01
-tags: Tools
+tags: Tools 图片 Base64
 ---
 
 ### Image to Base64:
