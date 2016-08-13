@@ -1,7 +1,8 @@
 title: 将图片转换为Base64字符串
 date: 2015-10-10 11:32:33
-tags: Base64
---- 图片 Base64
+tags: [图片,Base64]
+---
+
 ### 第一种方式：Image & Canvas
 
 ```js
