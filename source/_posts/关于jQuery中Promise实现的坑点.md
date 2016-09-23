@@ -7,23 +7,23 @@ Promise的出现，让我们可以较好的解决嵌套回调的问题，一般�
 这里写一个简单示例：
 
 ```js
-function next(){
+function next () {
     var defer = $.Deferred();
-    setTimeout(function(){
+    setTimeout(function () {
         defer.reject(0);
     }, 1000);
     return defer.promise();
 }
 
 next()
-.then(function(){
+.then(function () {
     return 1;
-}, function(num){
+}, function (num) {
     return num;
 })
-.then(function(num){
+.then(function (num) {
     console.log(num + 1);
-}, function(num){
+}, function (num) {
     console.log(num + 2);
 });
 ```
