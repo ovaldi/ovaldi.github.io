@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <style type="text/css">
+    	html{
+    		touch-action: manipulation;
+    	}
+    	html, body{
+    		margin: 0;
+			padding: 0;
+    	}
+		#main{
+			width: 100%;
+			height: 100%;
+			background: rgb(236, 242, 250);
+		}
+		#wrapper{
+			width: 80%;
+			height: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 999;
+			
+			background: rgb(247, 247, 247);
+			border: 1px solid #ccc;
+			border-radius: 5px;
+
+			display: flex;
+			justify-content: center;
+		    align-items: center;
+		}
+		#button{
+			color: #fff;
+			background: #4CAF50;
+			border: 1px solid #4CAF50;
+			border-radius: 5px;
+			padding: 5px 10px;
+		}
+    </style>
+  </head>
+  <body>
+  	<div id="main">
+		<div id="wrapper">
+			<span id="button">touch me</span>
+		</div>		
+  	</div>
+
+  	<script type="text/javascript">
+  		var main 	= document.getElementById('main');
+  		var wrapper = document.getElementById('wrapper');
+		var button	= document.getElementById('button');
+
+		main.addEventListener('click', function(){
+			alert("main: clicked...");
+		});
+
+		button.addEventListener('touchstart', function(e){
+			// e.preventDefault();
+		}, false);
+
+		button.addEventListener('click', function(e){
+			console.log(e);
+		}, false);
+
+		//hide wrapper
+		button.addEventListener('touchend', function(){
+			wrapper.style.display = 'none';
+		}, false);
+
+		//prevent touchend to avoid trigger click event
+		wrapper.addEventListener('touchend', function(ev){
+			ev.preventDefault();
+		}, false);
+    </script>
+</body>
+</html>
