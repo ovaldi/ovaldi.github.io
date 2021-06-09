@@ -251,13 +251,13 @@ webdriverio
     .init()
     .url(&apos;https://www.tmall.com/&apos;)
     .title(function(err, res) {
-        console.log(&apos;Title was: &apos; + res.value);
+        console.log(&apos;Title is: &apos; + res.value);
     })
     .end();
 </code></pre><p>另存为test.js，执行命令</p>
 <pre><code>node test.js
 </code></pre><p>程序将自动打开Chrome浏览器，并访问天猫官网，然后你将看到控制台输出如下信息：</p>
-<pre><code>Title was: 天猫tmall.com--上天猫，就够了
+<pre><code>Title is: 天猫tmall.com--上天猫，就够了
 </code></pre>
       
     </div>
